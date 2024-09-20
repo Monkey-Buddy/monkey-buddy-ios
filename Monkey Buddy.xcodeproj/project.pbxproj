@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -45,6 +45,10 @@
 		05750F8F2C82725900E6503A /* Monkey_BuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monkey_BuddyUITests.swift; sourceTree = "<group>"; };
 		05750F912C82725900E6503A /* Monkey_BuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monkey_BuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		059E899D2C9C01CB00E7C5B3 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		05750F6E2C82725700E6503A /* Frameworks */ = {
@@ -94,6 +98,7 @@
 		05750F732C82725700E6503A /* Monkey Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				059E899D2C9C01CB00E7C5B3 /* Model */,
 				05750F742C82725700E6503A /* Monkey_BuddyApp.swift */,
 				05750F762C82725700E6503A /* ContentView.swift */,
 				05750F782C82725800E6503A /* Assets.xcassets */,
@@ -141,6 +146,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				059E899D2C9C01CB00E7C5B3 /* Model */,
 			);
 			name = "Monkey Buddy";
 			productName = "Monkey Buddy";
@@ -191,7 +199,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					05750F702C82725700E6503A = {
 						CreatedOnToolsVersion = 15.4;
@@ -422,6 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Monkey Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = DY87SZW84V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Monkey Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = DY87SZW84V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -473,7 +483,6 @@
 		05750F992C82725900E6503A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -492,7 +501,6 @@
 		05750F9A2C82725900E6503A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -511,7 +519,6 @@
 		05750F9C2C82725900E6503A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -528,7 +535,6 @@
 		05750F9D2C82725900E6503A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
