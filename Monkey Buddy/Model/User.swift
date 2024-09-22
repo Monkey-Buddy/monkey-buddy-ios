@@ -19,6 +19,7 @@ struct User: Hashable, Codable, Identifiable {
     var climbingSchedule: ClimbingSchedule
     var friends: [FriendReference]?
     var primaryGym: String?
+    var savedGyms: [GymReference]?
     var isPrivateAccount: Bool
 
     enum BoulderingLevel: String, Codable, CaseIterable {
@@ -104,6 +105,12 @@ struct User: Hashable, Codable, Identifiable {
         var boulderlevel: BoulderingLevel
         var topRopeLevel: TopRopeLevel
     }
+    
+    struct GymReference: Hashable, Codable {
+        let id: UUID
+        var name: String
+        var gymImage: URL?
+    }
 
     struct Height: Hashable, Codable {
         var value: Double
@@ -124,4 +131,22 @@ struct User: Hashable, Codable, Identifiable {
             case pounds
         }
     }
+}
+
+// Haversine formula to calculate distance between two points on a sphere
+func distance(from user1: User, to user2: User) -> Double {
+    let earthRadius = 6371.0 // in kilometers
+    let dLat = (user2.latitude - user1.latitude) * .pi / 180
+    let dLong = (user2.longitude - user1.longitude) * .pi / 180
+
+    let lat1 = user1.latitude * .pi / 180
+    let lat2 = user2.latitude * .pi / 180
+
+    let a = sin(dLat / 2) * sin(dLat / 2) + (cos(lat1) * cos(lat2) * sin(dLong / 2) * sin(dLong / 2))
+    let c = 2 * asin(sqrt(a))
+    return earthRadius * c
+}
+
+func findNearbyUsers(from user: User, to users: [User]) -> [UserReference] {
+    return users.filter { distance(from user, to: $0) <= maxDistance } 
 }
